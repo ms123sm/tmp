@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+name = {{name1 | default:'NotFound'}} is {{age}} years old,
+<!-- |filter like this has no value, you could have empty filters (changes nothing) -->
+and his major is {{major | capfirst}}. {{name2|slice:'2:10'}}, {{major|length}}.
+{{major | add:' and music'}}. {{name2|cut:' '}}.
+{{huge|filesizeformat}}.
+
+
+{% block content %}
+<br>
+<br>
+<h1>XXXXX</h1>
+
+<br>
+{{name2}}
+
+{% if age == '100' %}
+<p>OLD</p>
+{% elif age == '33' %}
+<p>YOUNG</p>
+{% else %}
+<p>DNE</p>
+{% endif %}
+
+<br>
+{% if age == '100' %}
+<p>TIME TO PLAY!!!</p>
+{% for x in name2 %}
+	<p>{{x}}</p>
+{% endfor %}
+
+{% endif %}
+
+<span><a href="{% url 'about' %}">about</a></span>
+
+{% comment %}
+<h1>GOOOOOOOOOOOO</h1>
+{% endcomment %}
+<h1>why?</h1>
+{% endblock content %}
+

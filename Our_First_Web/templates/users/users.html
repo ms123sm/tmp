@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<br>
+<br>
+<br>
+<br>
+
+{% for x in allusers %}
+	<h3>{{x.username}}, {{x.nickname}}, {{x.score}}, {{x.online}}</h3>
+	<img src="{{x.image.url}}" alt="">
+{% endfor %}
+{% endblock content %} 
+
+
+<!-- {% for y in allusers %}
+	<h3>{{y}}</h3>
+{% endfor %}
+
+
+{% for x in allusers %}
+	<h3>{{x.username}}, {{x.nickname}}, {{x.score}}, {{x.online}}, {{x.image}}</h3>
+{% endfor %} -->
