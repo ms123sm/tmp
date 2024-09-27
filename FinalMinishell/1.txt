@@ -1,0 +1,13 @@
+1.txt
+2.txt
+Makefile
+builtins
+execute
+execution
+main.c
+mini_libft
+minishell
+minishell.h
+remaining.txt
+signals.c
+utils

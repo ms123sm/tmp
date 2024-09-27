@@ -1,0 +1,24 @@
+BUILTINS:
+
+void	export_with_args(t_env **env, t_export **export, int ac, char **av,
+	int *last_exit_status)
+	
+EXECUTE:
+
+static void	execute_command(char **args, t_env **envir, char echar[MAXARGS],
+	int *last_exit_status, t_export **exp)
+
+t_env	*execute_builtin(t_env **envir, char **args, char echar[MAXARGS],
+	int *last_exit_status, t_export **exp)
+
+---
+
+t_cmd*	parseredirs(t_cmd *cmd, char **ps, char *es, t_heredoc **heredoc, int *last_exit_status)
+struct cmd* redircmd(struct cmd *subcmd, char *file, char *efile, int mode, int fd)
+
+
+
+
+
+
+
